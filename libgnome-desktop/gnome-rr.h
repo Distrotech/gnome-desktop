@@ -183,32 +183,15 @@ GnomeRRRotation gnome_rr_crtc_get_rotations        (GnomeRRCrtc           *crtc)
 gboolean        gnome_rr_crtc_supports_rotation    (GnomeRRCrtc           *crtc,
 						    GnomeRRRotation        rotation);
 
-#if 0 /* gamma support */
 gboolean        gnome_rr_crtc_get_gamma            (GnomeRRCrtc           *crtc,
 						    int                   *size,
 						    unsigned short       **red,
 						    unsigned short       **green,
 						    unsigned short       **blue);
-void            gnome_rr_crtc_set_gamma            (GnomeRRCrtc           *crtc,
+gboolean        gnome_rr_crtc_set_gamma            (GnomeRRCrtc           *crtc,
 						    int                    size,
 						    unsigned short        *red,
 						    unsigned short        *green,
 						    unsigned short        *blue);
-#endif
-
-#if 0 /* configuration writing */
-void            gnome_rr_screen_set_primary_output (GnomeRRScreen         *screen,
-                                                    GnomeRROutput         *output);
-
-gboolean        gnome_rr_crtc_set_config_with_time (GnomeRRCrtc           *crtc,
-						    guint32                timestamp,
-						    int                    x,
-						    int                    y,
-						    GnomeRRMode           *mode,
-						    GnomeRRRotation        rotation,
-						    GnomeRROutput        **outputs,
-						    int                    n_outputs,
-						    GError               **error);
-#endif
 
 #endif /* GNOME_RR_H */
